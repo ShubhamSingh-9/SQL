@@ -1,2 +1,2 @@
 # SQL
-XAMPP and MYSQL for accessing the database
+XAMPP and MYSQL for accessing the database.
