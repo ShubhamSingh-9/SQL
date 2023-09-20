@@ -1,6 +1,6 @@
 # Database Fundamentals:
-1) A database is a place where data is stored and is a shared location of logically related data and description of these data, designed to meet the information needs of the organization.
-(A database is software that organises the data and stores it and whenever needed in any form can retrieve the data)
+1) The purpose of a database is to store and describe logically related data for the organization, in order to meet the information needs of the organization.
+(A database is software that organises and stores data so that it can be retrieved whenever it is needed.
 
 ## Database Use Cases:
    Data Storage: A database is used to store large amounts of structured data making it easily accessible, searchable, and retrievable. eg Ola/uber travel history.
