@@ -1,14 +1,14 @@
 # Database Fundamentals:
 
 ## What is a Database?
-1) The purpose of a database is to store and describe logically related data for the organization, in order to meet the information needs of the organization.
+1) The purpose of a database is to store and describe logically related data for the organization to meet the organisation's information needs.
 (A database is software that organises and stores data so that it can be retrieved whenever it is needed.
 
 2) Database Use Cases:
-   Data Storage: A database is used to store large amounts of structured data making it easily accessible, searchable, and retrievable. eg Ola/uber travel history.
+   Data Storage: A database stores large amounts of structured data making it easily accessible, searchable, and retrievable.eg Ola/uber travel history.
    Data Analysis: A database can be used to perform complex data analysis, generate reports, and provide insights into the data.
-   Record Keeping: A database is often used to keep track of important records, such as financial transactions, customer information, and inventory levels.
-   Web applications: Databases are an essential component of many web applications, providing dynamic content and user management.
+   Record Keeping: A database is often used to keep track of vital records, such as financial transactions, customer information, and inventory levels.
+   Web applications: Databases are essential to many web applications, providing dynamic content and user management.
 
 ## Properties of an Ideal Database:
 1. Integrity: It is made of 02 words Accuracy and consistency eg. The weight in a column is the same continuously (until someone changes it from their end)
@@ -16,6 +16,16 @@
 3. Security: Secured from any malware or attacks.
 4. Independent of application: Same database for web, applications.
 5. Concurrency: A Database must be able to serve data in parallel and not in sequence i.e. it answers all the questions at the same time as per the customer asked and not one after the other(sequence).
+
+
+## Type of Database
+1. Relational Databases: Also known as SQL databases, these databases use a relational model to organize data into tables with rows and columns.
+   Datasets are stored in a database called a Table or relation. It is also called OLTP.
+2. NoSQL Databases: These databases are designed to handle large amounts of unstructured or semi-structured data, such as documents, images or videos(MongoDB)
+3. Column Databases: These databases store data in columns rather than rows, making them well-suited for data warehousing and analytical applications(Amazon Redshift, Google BigQuery). Its also called OLAP or warehouse and in a row database the whole data is stored and accessed which requires a lot of space as in a column when a specific data is searched only that particular data is accessed and due to this less space is occupied by the column database.
+4. Graph Databases: These databases are used to store and query graph-structured data, such as social network connections or recommendation systems(Neo4j, Amazon Neptune) 
+5. Key_value databases: These databases store data as a collection of keys and values, making them well-suited for caching and simple data storage needs(Redis and Amazon DynamoDB). X(Twitter) and Instagram no of followers the system doesn't calculate each time you log in the no, comes up automatically so the nos are stored.
+
 
 
 # SQL
