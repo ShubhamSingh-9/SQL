@@ -31,3 +31,7 @@
 # SQL
 XAMPP and MYSQL for accessing the database.
 
+
+## To know no. of rows in the given table
+use count(*) 
+
