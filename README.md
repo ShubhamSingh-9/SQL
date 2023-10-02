@@ -37,6 +37,9 @@ We use 'Where' as a filter on the rows
 ## To know no. of rows in the given table
 use count(*) 
 
+## Having
+Just like WHERE which act as filter for rows after the SELECT Function is called HAVING act as a filter for the GROUP BY Function.
+
 ## Date Columns
 Date are normally in text format to convert the date to the Date format or Time Date series we can use DATE()
 Eg if we have the date columns in text format we can convert it into Time-Series Format by DATE(date) by adding MONTH or MONTHNAME before the () we can extract the month details.
