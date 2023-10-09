@@ -1,4 +1,4 @@
-# Database Fundamentals:
+# Database Fundamentals/
 
 ## What is a Database?
 1) The purpose of a database is to store and describe logically related data for the organization to meet the organisation's information needs.
