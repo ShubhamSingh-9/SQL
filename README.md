@@ -31,6 +31,7 @@
 
 # SQL
 ![downloadh](https://github.com/ShubhamSingh-9/SQL/assets/111279439/10104bc7-98c6-46ae-b4ed-3715943d56fe)
+
 XAMPP and MYSQL for accessing the database.
 
 ## Where function
