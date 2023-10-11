@@ -26,6 +26,7 @@
 4. Graph Databases: These databases are used to store and query graph-structured data, such as social network connections or recommendation systems(Neo4j, Amazon Neptune) 
 5. Key_value databases: These databases store data as a collection of keys and values, making them well-suited for caching and simple data storage needs(Redis and Amazon DynamoDB). X(Twitter) and Instagram no. of followers the system doesn't calculate each time you log in the no, comes up automatically so the nos are stored.
 
+![downloadh](https://github.com/ShubhamSingh-9/SQL/assets/111279439/10104bc7-98c6-46ae-b4ed-3715943d56fe)
 
 
 # SQL
