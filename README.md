@@ -45,7 +45,7 @@ Just like WHERE which acts as a filter for rows after the SELECT Function is cal
 
 ## Date Columns
 The date is normally in text format to convert the date to the Date format or Time Date series we can use DATE()
-Eg if we have the date columns in text format we can convert it into Time-Series Format by DATE(date) by adding MONTH or MONTHNAME before the () we can extract the month details.
+eg if we have the date columns in text format we can convert it into Time-Series Format by DATE(date) by adding MONTH or MONTHNAME before the () we can extract the month details.
 
 ## Subqueries
 Subqueries is a query within another query. It is a SELECT statement that is nested inside another SELECT, INSERT, UPDATE, or DELETE statement. The subquery is executed first, and its result is then used as a parameter or condition for the outer query.
