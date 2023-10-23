@@ -61,9 +61,23 @@ ORDER BY AVG_val ASC LIMIT 10;
 SELECT State, AVG(Value)  FROM coll
 WHERE Type LIKE '%Public%' AND Expense LIKE '%Tuition%'
 GROUP BY State
-ORDER BY AVG(Value) ASC LIMIT 1
+ORDER BY AVG(Value) ASC LIMIT 1;
 
 /*Problem 9: 2nd Costliest state for Private education in year 2021. Consider, Tution and Room fee both.*/
+SELECT * FROM coll
+WHERE YEAR = 2021 AND 
+TYPE LIKE '%Private%' AND 
+(Expense LIKE '%Tuition%' OR Expense LIKE '%Room')
+GROUP BY State
+ORDER BY State DESC LIMIT 1,1;
 
+/*The question is:
+Display total and average values of Discount_offered for all the combinations of 'Mode_of_Shipment' (display this feature) 
+and 'Warehouse_block' (display this feature also) for all male ('M') and 'High' Product_importance. Also sort the values in 
+descending order of Mode_of_Shipment and ascending order of Warehouse_block.*/
+SELECT Mode_of_Shipment, Warehouse_block,SUM(Discount_offered),AVG(Discount_offered) FROM ecomm
+WHERE Gender = 'M' AND 
+Product_importance = 'High'
+GROUP BY Mode_of_Shipment, Warehouse_block
+ORDER BY Mode_of_Shipment DESC , Warehouse_block ASC
 
- 
