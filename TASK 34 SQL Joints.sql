@@ -41,15 +41,42 @@ SELECT t1.SalesPersonID,FirstName,COUNT(DISTINCT CUSTOMERID) AS 'unique_custmr' 
 JOIN employees t2
 ON t1.SalesPersonID=t2.EmployeeID
 GROUP BY t1.SalespersonID
-ORDER BY unique_custmr DESC LIMIT 1
+ORDER BY unique_custmr DESC LIMIT 1;
 
 /* Q-6: Sales man who has generated most revenue. Show top 5. */
+SELECT FirstName, LastName,ROUND(SUM(Quantity*Price)) AS 'Total_Sales' FROM sales1 t1
+JOIN employees t2
+ON t1.SalesPersonID=t2.EmployeeID
+JOIN products t3
+ON t1.ProductID = t3.ProductID
+GROUP BY FirstName,LastName
+ORDER BY Total_Sales DESC LIMIT 5;
 
 
 /* Q-7: List all customers who have made more than 10 purchases. */
-
+SELECT t1.CustomerID,t2.FirstName,t2.LastName,COUNT(*) AS 'total_qty' FROM sales1 t1
+JOIN customers t2
+ON t1.CustomerID=t2.CustomerID
+GROUP BY CustomerID
+HAVING total_qty >10;
 
 /* Q-8 : List all salespeople who have made sales to more than 5 customers. */
-
+SELECT t1.SalesPersonID,t2.FirstName,Count(distinct CustomerID) FROM sales1 t1
+JOIN employees t2
+ON t1.SalesPersonID=t2.EmployeeID
+GROUP BY t1.SalesPersonID
+HAVING Count(*)>5;
 
 /* Q-9: List all pairs of customers who have made purchases with the same salesperson. */
+SELECT * FROM ((SELECT DISTINCT t1.CustomerID AS '1st_custmr',
+t2.CustomerID AS '2nd_custmr',
+t1.SalesPersonID  FROM sales1 t1
+JOIN sales1 t2
+ON t1.SalesPersonID=t2.SalesPersonID
+AND t1.CustomerID != t2.CustomerID)t3 
+JOIN customers t4
+ON t3.1st_custmr=t4.CustomerID
+LEFT JOIN customers t5
+ON t3.2nd_custmr=t5.CustomerID
+LEFT JOIN employees t6
+ON t6.EmployeeID=t3.SalesPersonID )
