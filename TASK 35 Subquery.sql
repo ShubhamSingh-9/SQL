@@ -37,4 +37,35 @@ HAVING COUNT(Medal)>1);
 
 /*Problem 6 : What is the average weight difference between male and female athletes in the Olympics who have won a medal in 
 the same event?*/
-SELECT * FROM olympics_cleaned_v4
+
+/*Problem 7
+How many patients have claimed more than the average claim amount for patients who are smokers and have at least one child, 
+and belong to the southeast region?*/
+SELECT COUNT(*) FROM insurance
+WHERE claim > (SELECT AVG(claim) FROM insurance  
+        	   WHERE region = 'southeast' AND
+	           smoker = 'Yes' AND
+	           children>=1);
+               
+/*Problem 8 : How many patients have claimed more than the average claim amount for patients who are not smokers and have a 
+BMI greater than the average BMI for patients who have at least one child?*/               
+SELECT COUNT(*) FROM insurance
+WHERE claim > (SELECT AVG(claim) FROM insurance 
+				WHERE smoker = 'No' AND
+				BMI> (SELECT AVG(BMI) FROM insurance 
+				WHERE children>=1));
+
+
+/*Problem 9 : How many patients have claimed more than the average claim amount for patients who have a BMI greater than the average 
+BMI for patients who are diabetic, have at least one child, and are from the southwest region?*/
+SELECT COUNT(*) FROM insurance
+WHERE claim > (SELECT AVG(claim) FROM insurance 
+				WHERE BMI > (SELECT AVG(BMI) FROM insurance
+				WHERE diabetic = 'Yes' AND 
+				children >=1 AND
+				region = 'southeast'));
+                
+                
+/*Problem 10: What is the difference in the average claim amount between patients who are smokers and patients who are non-smokers, 
+and have the same BMI and number of children?*/
+                
