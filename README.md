@@ -45,7 +45,12 @@ Just like WHERE which acts as a filter for rows after the SELECT Function is cal
 
 ## Date Columns
 The date is normally in text format to convert the date to the Date format or Time Date series we can use DATE()
-eg if we have the date columns in text format we can convert it into Time-Series Format by DATE(date) by adding MONTH or MONTHNAME before the () we can extract the month details.
+eg. if we have the date columns in text format we can convert it into Time-Series Format by DATE(date) by adding MONTH or MONTHNAME before the () we can extract the month details.
+
+
+##Joints
+In SQL a Join is a way to combine data from 02 or more database tables based on a related column between them. Joins are used when we want Query information that is distributed across multiple tables in a database and the information we need is not contained in a single table. By joining tables together we can create a virtual table that contains all the information we need for our Query. and to perform join between one or multiple tables we need to have a common column in all the tables.
+
 
 ## Subqueries
 Subqueries is a query within another query. It is a SELECT statement that is nested inside another SELECT, INSERT, UPDATE, or DELETE statement. The subquery is executed first, and its result is then used as a parameter or condition for the outer query.
