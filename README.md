@@ -67,9 +67,14 @@ To use a Windows function, you need to specify an OVER() clause that defines the
 There are different types of Windows functions that you can use for different purposes. Some of them are:
 
 - RANK(): This function assigns a rank to each row within a window based on the values of a specified column or expression. The rank starts from 1 and increases by 1 for each distinct value. Rows with the same value have the same rank and create gaps in the sequence.
-- DENSE_RANK(): This function is similar to RANK(), but it does not create gaps in the sequence. The rank starts from 1 and increases by 1 for each distinct value, but rows with the same value have the same rank and the next rank continues from the previous one.
-- ROW_NUMBER(): This function assigns a sequential number to each row within a window starting from 1. The order of the rows is determined by the ORDER BY clause within the OVER() clause. Rows with the same value can have different numbers depending on their order.
-- FIRST_VALUE(): This function returns the first value of a specified column or expression within a window. The order of the values is determined by the ORDER BY clause within the OVER() clause.
-- LAST_VALUE(): This function returns the last value of a specified column or expression within a window. The order of the values is determined by the ORDER BY clause within the OVER() clause.
-- NTH_VALUE(): This function returns the nth value of a specified column or expression within a window. Could you specify n as an argument to the function? The order of the values is determined by the ORDER BY clause within the OVER() clause.
+- DENSE_RANK(): This function is similar to RANK() but does not create sequence gaps. The rank starts from 1 and increases by 1 for each distinct value, but rows with the same value have the same rank and the next rank continues from the previous one.
+- ROW_NUMBER(): This function assigns a sequential number to each row within a window starting from 1. The ORDER determines the order of the rows BY clause within the OVER() clause. Rows with the same value can have different numbers depending on their order.
+- FIRST_VALUE(): This function returns the first value of a specified column or expression within a window. The ORDER determines the order of the values BY clause within the OVER() clause.
+- LAST_VALUE(): This function returns the last value of a specified column or expression within a window. The ORDER determines the order of the values BY clause within the OVER() clause.
+- NTH_VALUE(): This function returns the nth value of a specified column or expression within a window. Could you specify n as an argument to the function? The ORDER determines the order of the values BY clause within the OVER() clause.
+
+- #Frames:
+- Frame in a window function is a subset of rows within the partition that determines the scope of the function.The frame is defined using combination of two caluses in the window function: ROWS and BETWEEN
+- Rows clause sepcifies how many rows should be included in the frame relative to the current row.For Example ROW 3 PRECEDING means that the frame includes the current row and teh three rows that precede it in the partition.
+- The BETWEEN class specifies the boundaries of the frame.
 
