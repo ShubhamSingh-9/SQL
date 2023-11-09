@@ -73,7 +73,7 @@ There are different types of Windows functions that you can use for different pu
 - LAST_VALUE(): This function returns the last value of a specified column or expression within a window. The ORDER determines the order of the values BY clause within the OVER() clause.
 - NTH_VALUE(): This function returns the nth value of a specified column or expression within a window. Could you specify n as an argument to the function? The ORDER determines the order of the values BY clause within the OVER() clause.
 
-- #Frames:
+- # Frames:
 - Frame in a window function is a subset of rows within the partition that determines the scope of the function.The frame is defined using combination of two caluses in the window function: ROWS and BETWEEN
 - Rows clause sepcifies how many rows should be included in the frame relative to the current row.For Example ROW 3 PRECEDING means that the frame includes the current row and teh three rows that precede it in the partition.
 - The BETWEEN class specifies the boundaries of the frame.
